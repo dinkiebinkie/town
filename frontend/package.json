@@ -1,0 +1,44 @@
+{
+  "name": "binkie.town",
+  "version": "v2",
+  "private": false,
+  "dependencies": {
+    "apollo-boost": "^0.3.1",
+    "axios": "^0.18.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "instafeed-lite": "^1.0.10",
+    "instafeed.js": "^1.4.1",
+    "prop-types": "^15.6.2",
+    "react": "16.8.0-alpha.0",
+    "react-apollo": "^2.3.3",
+    "react-dom": "16.8.0-alpha.0",
+    "react-draggable": "^3.0.5",
+    "react-scripts": "2.1.1",
+    "react-youtube": "^7.9.0",
+    "styled-components": "^4.0.3",
+    "styled-normalize": "^8.0.4",
+    "three": "^0.101.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0"
+  }
+}
