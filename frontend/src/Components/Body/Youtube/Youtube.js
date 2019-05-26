@@ -1,10 +1,15 @@
 import React, { Component, useState, useEffect } from "react";
 import axios from "axios";
 import Chunk from "../../shared/Chunk";
-import YouTube from "react-youtube";
 import styled from "styled-components";
 
 const binkieId = "UCqoMPjVw7Snc9owzyg94eMA";
+
+const YouTubeChunk = styled(Chunk)`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+`;
 
 const YouTubeContainer = styled.div`
   width: 100%;
@@ -15,6 +20,31 @@ const YouTubeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 500px) {
+    padding: 10px 0;
+  }
+`;
+
+const VideoList = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  div {
+    margin-top: 16px;
+    max-width: 49%;
+    padding-bottom: 24.5%;
+    padding-top: 25px;
+    height: 0;
+    width: 100%;
+    position: relative;
+    @media (max-width: 500px) {
+      max-width: 100%;
+      padding-bottom: 56.25%;
+    }
+  }
 `;
 
 class Youtube extends Component {
@@ -48,16 +78,9 @@ class Youtube extends Component {
     const { videos } = this.state;
     console.log(videos);
     return (
-      <Chunk
-        style={{
-          alignItems: "center",
-          display: "flex",
-          flexDirection: "column"
-        }}
-      >
+      <YouTubeChunk>
         <YouTubeContainer>
           <div
-            className="video"
             style={{
               position: "relative",
               paddingBottom: "56.25%" /* 16:9 */,
@@ -78,12 +101,32 @@ class Youtube extends Component {
               frameBorder="0"
             />
           </div>
-          {videos.map((videoId, i) => {
-            if (i === 0) return;
-            return <YouTube className="youtubeVid" videoId={videoId} />;
-          })}
+          <VideoList>
+            {videos.map((videoId, i) => {
+              if (i === 0) return;
+              return (
+                <div>
+                  <iframe
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%"
+                    }}
+                    className="youtubeVid"
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    frameBorder="0"
+                  />
+                </div>
+              );
+            })}
+          </VideoList>
+          <a href="https://www.youtube.com/channel/UCqoMPjVw7Snc9owzyg94eMA">
+            See more videos
+          </a>
         </YouTubeContainer>
-      </Chunk>
+      </YouTubeChunk>
     );
   }
 }

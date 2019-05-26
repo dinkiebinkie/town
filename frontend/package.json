@@ -15,7 +15,6 @@
     "react-dom": "16.8.0-alpha.0",
     "react-draggable": "^3.0.5",
     "react-scripts": "2.1.1",
-    "react-youtube": "^7.9.0",
     "styled-components": "^4.0.3",
     "styled-normalize": "^8.0.4",
     "three": "^0.101.1"

@@ -11,15 +11,7 @@ const colors = [
   "#5DC99F",
   "#3B6D81",
   "#6F677F",
-  "#812A3A",
-  "#79341A",
-  "#504235",
-  "#7c7153",
-  "#604041",
-  "#7b7247",
-  "#3d3938",
-  "#847766",
-  "#7d464b"
+  "#812A3A"
 ];
 
 const randomInt = max =>
@@ -45,14 +37,6 @@ class Header extends Component {
     },${randomInt(3)}vw ${randomInt(12)}vw ${randomInt(12)}vw ${
       colors[randomInt(colors.length)]
     },${randomInt(4)}vw ${randomInt(16)}vw ${randomInt(16)}vw ${
-      colors[randomInt(colors.length)]
-    },${randomInt(5)}vw ${randomInt(20)}vw ${randomInt(20)}vw ${
-      colors[randomInt(colors.length)]
-    },${randomInt(6)}vw ${randomInt(24)}vw ${randomInt(24)}vw ${
-      colors[randomInt(colors.length)]
-    },${randomInt(7)}vw ${randomInt(28)}vw ${randomInt(28)}vw  ${
-      colors[randomInt(colors.length)]
-    },${randomInt(8)}vw ${randomInt(32)}vw ${randomInt(32)}vw ${
       colors[randomInt(colors.length)]
     }`;
 
