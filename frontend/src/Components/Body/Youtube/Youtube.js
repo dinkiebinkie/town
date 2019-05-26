@@ -47,6 +47,16 @@ const VideoList = styled.div`
   }
 `;
 
+const ChannelLink = styled.a`
+  font-family: "Ogg", sans-serif;
+  font-size: 4rem;
+  font-style: italic;
+  margin-top: 24px;
+  color: #232323;
+  text-decoration: none;
+  font-weight: bold;
+`;
+
 class Youtube extends Component {
   state = {
     videos: ["zMQmIq40NI8"]
@@ -57,7 +67,7 @@ class Youtube extends Component {
       .get(
         `https://www.googleapis.com/youtube/v3/search?key=${
           process.env.REACT_APP_YOUTUBE_API_KEY
-        }&channelId=${binkieId}&part=snippet,id&order=date&maxResults=20`,
+        }&channelId=${binkieId}&part=snippet,id&order=date&maxResults=5`,
         { crossDomain: true }
       )
       .then(res => {
@@ -74,9 +84,7 @@ class Youtube extends Component {
   }
 
   render() {
-    console.log(process.env);
     const { videos } = this.state;
-    console.log(videos);
     return (
       <YouTubeChunk>
         <YouTubeContainer>
@@ -122,9 +130,12 @@ class Youtube extends Component {
               );
             })}
           </VideoList>
-          <a href="https://www.youtube.com/channel/UCqoMPjVw7Snc9owzyg94eMA">
+          <ChannelLink
+            target="_blank"
+            href="https://www.youtube.com/channel/UCqoMPjVw7Snc9owzyg94eMA"
+          >
             See more videos
-          </a>
+          </ChannelLink>
         </YouTubeContainer>
       </YouTubeChunk>
     );
