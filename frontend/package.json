@@ -1,10 +1,10 @@
 {
   "name": "binkie.town",
-  "version": "v2",
   "private": false,
   "dependencies": {
     "apollo-boost": "^0.3.1",
     "axios": "^0.18.0",
+    "dotenv": "^8.0.0",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "instafeed-lite": "^1.0.10",

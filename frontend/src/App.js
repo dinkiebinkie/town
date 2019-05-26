@@ -6,8 +6,8 @@ import Body from "./Components/Body";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Ogg from "./assets/fonts/Ogg-Roman.otf";
-
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
 const theme = {
   grey: "#B9B4AF",

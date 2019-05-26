@@ -11,7 +11,7 @@ import LinkedIn from "./LinkedIn";
 const Body = () => (
   <Fragment>
     <Youtube />
-    <Instagram />
+    {/* <Instagram /> */}
     {/* <LinkedIn /> */}
   </Fragment>
 );
