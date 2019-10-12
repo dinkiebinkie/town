@@ -9,6 +9,8 @@ module.exports = [
     number_of_likes: 200, // how many tweets does the bot like a day
     ml_notebook: "path/of/ML", // who's ur daddy botty boy
     tweet_storage_length: 100, // how many tweets are requested if it's running low
-    timer: 12 // how long (hours) until next tweet? variation of 75-125%
+    timer: 12, // how long (hours) until next tweet? variation of 75-125%
+    hashtags: [], // any hashtags you think the bot should include if the tweet is short enough
+    hashtagPercentage: 75 // % of the time you think the bot should send a tweet
   }
 ];
