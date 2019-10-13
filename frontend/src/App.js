@@ -1,7 +1,5 @@
 import React from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
 import Body from "./Components/Body";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -56,21 +54,15 @@ const Container = styled.div`
   }
 `;
 
-const client = new ApolloClient({
-  uri: "https://nodejs-d46mbauhe.now.sh"
-});
-
 const App = () => (
-  <ApolloProvider client={client}>
-    <ThemeProvider theme={theme}>
-      <Container>
-        <Header />
-        <Body />
-        <Footer />
-        <GlobalStyle />
-      </Container>
-    </ThemeProvider>
-  </ApolloProvider>
+  <ThemeProvider theme={theme}>
+    <Container>
+      <Header />
+      <Body />
+      <Footer />
+      <GlobalStyle />
+    </Container>
+  </ThemeProvider>
 );
 
 export default App;
